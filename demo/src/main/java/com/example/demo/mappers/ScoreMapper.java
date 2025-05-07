@@ -15,8 +15,8 @@ public class ScoreMapper {
         ScoreResponseDTO dto = new ScoreResponseDTO();
         dto.setId(score.getId());
         dto.setScore(score.getScore());
-        dto.setDate(score.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
-        dto.setUserId(score.getUser().getId());
+        dto.setMaxScore(score.getMaxScore());
+        dto.setUserName(score.getUser().getName());
 
         return dto;
     }

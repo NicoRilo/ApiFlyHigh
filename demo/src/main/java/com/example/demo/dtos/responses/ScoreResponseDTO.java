@@ -6,6 +6,6 @@ import lombok.Data;
 public class ScoreResponseDTO {
     private Integer id;
     private Integer score;
-    private String date;
-    private Integer userId;
+    private Integer maxScore;
+    private String userName;
 }

@@ -3,8 +3,6 @@ package com.example.demo.mappers;
 import com.example.demo.dtos.responses.UserResponseDTO;
 import com.example.demo.models.Users;
 import org.springframework.stereotype.Component;
-
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,7 +23,7 @@ public class UserMapper {
                 UserResponseDTO.ScoreResposneDTO scoreDTO = new UserResponseDTO.ScoreResposneDTO();
                 scoreDTO.setId(score.getId());
                 scoreDTO.setScore(score.getScore());
-                scoreDTO.setDate(score.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+                scoreDTO.setMaxScore(score.getMaxScore());
                 return scoreDTO;
             }).collect(Collectors.toList());
             dto.setScores(scoreDTOs);

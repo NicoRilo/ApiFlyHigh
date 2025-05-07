@@ -16,6 +16,6 @@ public class UserResponseDTO {
     public static class ScoreResposneDTO {
         private Integer id;
         private Integer score;
-        private String date;
+        private Integer maxScore;
     }
 }

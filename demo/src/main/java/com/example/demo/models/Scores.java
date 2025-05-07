@@ -24,7 +24,6 @@ public class Scores {
     @Column(name = "score", nullable = false)
     private Integer score;
 
-    @Column(name = "date", nullable = false)
-    private LocalDateTime date = LocalDateTime.now();
-
+    @Column(name = "max_score", nullable = false)
+    private Integer maxScore;
 }
