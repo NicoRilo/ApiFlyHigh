@@ -4,7 +4,7 @@ import com.example.demo.dtos.responses.ScoreResponseDTO;
 import com.example.demo.models.Scores;
 import org.springframework.stereotype.Component;
 
-import java.time.format.DateTimeFormatter;
+// Mapper para convertir una entidad Score en un ScoreResponseDTO
 
 @Component
 public class ScoreMapper {
@@ -16,7 +16,7 @@ public class ScoreMapper {
         dto.setId(score.getId());
         dto.setScore(score.getScore());
         dto.setMaxScore(score.getMaxScore());
-        dto.setUserName(score.getUser().getName());
+        dto.setUsername(score.getUser().getName());
 
         return dto;
     }

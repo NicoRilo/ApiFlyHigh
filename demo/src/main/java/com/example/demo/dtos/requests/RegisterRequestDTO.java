@@ -1,6 +1,8 @@
 package com.example.demo.dtos.requests;
 
 public class RegisterRequestDTO {
+
+    // DTO para recibir los datos para el registro
     private String username;
     private String password;
 

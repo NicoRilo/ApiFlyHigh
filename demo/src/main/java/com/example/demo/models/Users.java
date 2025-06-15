@@ -1,18 +1,20 @@
 package com.example.demo.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
-@Entity
-@Data
+// Representa la entidad Users.
+// Cada valor corresponde a un registro en la tabla "users" de la base de datos.
+
+@Entity // Entidad JPA
+@Data // Genera getters, setters, etc.
 @Table(name = "users")
 public class Users {
 
-    @Id
+    @Id // Idica que es la calve primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
@@ -23,8 +25,8 @@ public class Users {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "coins", nullable = false)
-    private Integer coins=0;
+    @Column(name = "bibliography")
+    private String bibliography;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -32,8 +34,4 @@ public class Users {
 
     @Column(name = "role", nullable = false)
     private String role;
-
-    public enum Role {
-        USER, ADMIN, PLAYER;
-    }
 }

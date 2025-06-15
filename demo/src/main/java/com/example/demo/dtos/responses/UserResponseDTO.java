@@ -4,11 +4,14 @@ import lombok.Data;
 
 import java.util.List;
 
+// DTO para devolver los datos de los usuarios
+
 @Data
 public class UserResponseDTO {
     private Integer id;
     private String name;
-    private Integer coins;
+    private String password;
+    private String bibliography;
     private String role;
     private List<ScoreResposneDTO> scores;
 

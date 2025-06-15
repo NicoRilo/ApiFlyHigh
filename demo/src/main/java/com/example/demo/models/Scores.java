@@ -6,12 +6,15 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Data
+// Representa la entidad Scores.
+// Cada valor corresponde a un registro en la tabla "scores" de la base de datos.
+
+@Entity // Entidad JPA
+@Data // Genera getters, setters, etc.
 @Table(name = "scores")
 public class Scores {
 
-    @Id
+    @Id // Idica que es la calve primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
